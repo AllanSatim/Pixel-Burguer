@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hist&oacute;rico de Vendas &mdash; Pixel Burguer</title>
+  <meta name="description" content="Registro de comandas encerradas e vendas da lanchonete.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conte&uacute;do</a>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Navegação Administrativa">
+      <div>
+        <a href="admin.html" class="sidebar-brand" title="Pixel Burguer - Painel Admin">
+          <img src="../assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="logo-img">
+        </a>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link" title="Fila de Pedidos (Kanban)">
+            <i class="fa-solid fa-gamepad" aria-hidden="true" style="color: var(--neon-cyan);"></i>
+            <span>Fila de Pedidos</span>
+          </a>
+          <a href="historico.html" class="nav-link active" aria-current="page" title="Histórico de Vendas">
+            <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+            <span>Histórico</span>
+          </a>
+          <a href="estoque.html" class="nav-link" title="Controle de Estoque">
+            <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+            <span>Controle de Estoque</span>
+          </a>
+          <a href="cardapio.html" class="nav-link" title="Ver Cardápio Público">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            <span>Cardápio</span>
+          </a>
+          <!-- Acesso à nova área infantil diretamente pelo painel. -->
+          <a href="kids.html" class="nav-link nav-link-kids" title="Ver Área Kids">
+            <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+            <span>Área Kids</span>
+          </a>
+          <a href="index.html" class="nav-link" title="Ir para a Visão do Cliente">
+            <i class="fa-solid fa-store" aria-hidden="true"></i>
+            <span>Voltar ao Salão</span>
+          </a>
+          <a href="login.html" class="nav-link" title="Sair da Conta de Administrador" style="margin-top: 16px; color: #FF2E63;">
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true" style="color: #FF2E63;"></i>
+            <span>Sair do Admin</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Rodapé do menu administrativo -->
+      <div class="sidebar-footer">
+        <img src="../assets/images/LogoPixelBurguer1.png" alt="" class="footer-icon" aria-hidden="true">
+        <p class="footer-text">Central de Produção &amp; Pedidos Gamer</p>
+        <div class="accent-line" aria-hidden="true"></div>
+      </div>
+    </aside>
+    <div class="main-content">
+      <main id="conteudo-principal" class="page-container" style="padding-top: 28px;">
+<header class="admin-top-bar">
+          <div class="admin-title-area">
+            <h1>Hist&oacute;rico de Vendas</h1>
+            <p>
+              <i class="fa-solid fa-gamepad" aria-hidden="true" style="color: var(--neon-cyan);"></i>
+              <span>Registro de comandas encerradas e vendas da lanchonete.</span>
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <!-- Perfil do Administrador -->
+            <div class="admin-user-profile">
+              <div class="admin-avatar">T</div>
+              <div class="admin-user-info">
+                <span class="admin-user-name">Teste</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- SUB-NAV DE TELAS (ABAS RÁPIDAS) -->
+        <nav class="admin-view-tabs" aria-label="Se&ccedil;&otilde;es Administrativas">
+          <a href="admin.html" class="admin-tab-btn"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Fila de Pedidos</span></a>
+          <a href="historico.html" class="admin-tab-btn active" aria-current="page"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Hist&oacute;rico</span></a>
+          <a href="estoque.html" class="admin-tab-btn"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Controle de Estoque</span></a>
+        </nav>
+<div id="view-historico" class="admin-tab-view" style="margin-top: 40px;">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Histórico de Comandas Encerradas</h2>
+              <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">
+                Registro completo de todos os pedidos finalizados e contas pagas na lanchonete.
+              </p>
+            </div>
+          </div>
+
+          <div class="history-table-wrapper">
+            <table class="history-table">
+              <thead>
+                <tr>
+                  <th># Pedido</th>
+                  <th>Horário</th>
+                  <th>Mesa</th>
+                  <th>Cliente</th>
+                  <th>Itens Consumidos</th>
+                  <th>Total</th>
+                  <th>Pagamento</th>
+                </tr>
+              </thead>
+              <tbody id="history-table-body">
+                <tr>
+                  <td><strong style="color: var(--neon-cyan);">#1035</strong></td>
+                  <td>18:50</td>
+                  <td><span class="status-tag tag-table">Mesa 06</span></td>
+                  <td><strong>Renata Castro</strong></td>
+                  <td>2x Smash Burger Duplo, 2x Coca-Cola 350ml</td>
+                  <td><strong style="color: #FFF;">R$ 73,80</strong></td>
+                  <td><span style="color: var(--neon-green);">Pago no Cartão de Crédito</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="color: var(--neon-cyan);">#1034</strong></td>
+                  <td>18:30</td>
+                  <td><span class="status-tag tag-counter">Balcão 01</span></td>
+                  <td><strong>Guilherme Santos</strong></td>
+                  <td>1x Combo Duplo Clássico</td>
+                  <td><strong style="color: #FFF;">R$ 42,90</strong></td>
+                  <td><span style="color: var(--neon-green);">Pago no PIX</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+              </main>
+    </div>
+  </div>
+</body>
+</html>

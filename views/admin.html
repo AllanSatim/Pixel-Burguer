@@ -3,54 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Central de Comando da Cozinha — Pixel Burguer</title>
-  <meta name="description" content="Painel de controle gamer e esteira de produção de pedidos da hamburgueria.">
-  <!-- CSS base mantém o layout; o tema abaixo personaliza cores e componentes. -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="stylesheet" href="/assets/css/tema-gamer.css">
+  <title>Central de Comando da Cozinha &mdash; Pixel Burguer</title>
+  <meta name="description" content="Registro de pedidos">
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <!-- Acessibilidade: permite pular a navegação usando a tecla Tab. -->
-  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
-
-  <!-- Painel da cozinha: apresenta pedidos, filtros de status e histórico administrativo. -->
-  <!-- ===================================================================
-       CONTROLES DE FILTRO EM PURO CSS (100% Zero JavaScript)
-       Alterna entre: Todos, Recebidos, Em preparo, Prontos e Encerrados
-       =================================================================== -->
+  <a class="skip-link" href="#conteudo-principal">Pular para o conte&uacute;do</a>
   <input type="radio" name="order-status-filter" id="filter-all" class="order-filter-radio" checked>
   <input type="radio" name="order-status-filter" id="filter-recebidos" class="order-filter-radio">
   <input type="radio" name="order-status-filter" id="filter-preparo" class="order-filter-radio">
   <input type="radio" name="order-status-filter" id="filter-prontos" class="order-filter-radio">
   <input type="radio" name="order-status-filter" id="filter-finalizados" class="order-filter-radio">
-
   <div class="app-layout">
-
-    <!-- MENU LATERAL ADMINISTRATIVO -->
     <aside class="sidebar" aria-label="Navegação Administrativa">
       <div>
-        <a href="/views/admin.html" class="sidebar-brand" title="Pixel Burguer - Painel Admin">
-          <img src="/assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="logo-img">
+        <a href="admin.html" class="sidebar-brand" title="Pixel Burguer - Painel Admin">
+          <img src="../assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="logo-img">
         </a>
 
         <nav class="sidebar-nav">
-          <a href="/views/admin.html" class="nav-link active" title="Fila de Pedidos (Kanban)">
+          <a href="admin.html" class="nav-link active" title="Fila de Pedidos (Kanban)">
             <i class="fa-solid fa-gamepad" aria-hidden="true" style="color: var(--neon-cyan);"></i>
             <span>Fila de Pedidos</span>
           </a>
-          <a href="#view-historico" class="nav-link" title="Histórico de Vendas">
+          <a href="historico.html" class="nav-link" title="Histórico de Vendas">
             <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
             <span>Histórico</span>
           </a>
-          <a href="/views/cardapio.html" class="nav-link" title="Ver Cardápio Público">
+          <a href="estoque.html" class="nav-link" title="Controle de Estoque">
+            <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+            <span>Controle de Estoque</span>
+          </a>
+          <a href="cardapio.html" class="nav-link" title="Ver Cardápio Público">
             <i class="fa-solid fa-utensils" aria-hidden="true"></i>
             <span>Cardápio</span>
           </a>
-          <a href="/views/index.html" class="nav-link" title="Ir para a Visão do Cliente">
+          <!-- Acesso à nova área infantil diretamente pelo painel. -->
+          <a href="kids.html" class="nav-link nav-link-kids" title="Ver Área Kids">
+            <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+            <span>Área Kids</span>
+          </a>
+          <a href="index.html" class="nav-link" title="Ir para a Visão do Cliente">
             <i class="fa-solid fa-store" aria-hidden="true"></i>
             <span>Voltar ao Salão</span>
           </a>
-          <a href="/views/login.html" class="nav-link" title="Sair da Conta de Administrador" style="margin-top: 16px; color: #FF2E63;">
+          <a href="login.html" class="nav-link" title="Sair da Conta de Administrador" style="margin-top: 16px; color: #FF2E63;">
             <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true" style="color: #FF2E63;"></i>
             <span>Sair do Admin</span>
           </a>
@@ -59,61 +56,40 @@
 
       <!-- Rodapé do menu administrativo -->
       <div class="sidebar-footer">
-        <img src="/assets/images/LogoPixelBurguer1.png" alt="" class="footer-icon" aria-hidden="true">
+        <img src="../assets/images/LogoPixelBurguer1.png" alt="" class="footer-icon" aria-hidden="true">
         <p class="footer-text">Central de Produção &amp; Pedidos Gamer</p>
         <div class="accent-line" aria-hidden="true"></div>
       </div>
     </aside>
-
-    <!-- ÁREA PRINCIPAL ADMINISTRATIVA -->
     <div class="main-content">
-
-      <!-- PAINEL SUPERIOR -->
-      <main class="page-container" style="padding-top: 28px;">
-
-        <header class="admin-top-bar">
+      <main id="conteudo-principal" class="page-container" style="padding-top: 28px;">
+<header class="admin-top-bar">
           <div class="admin-title-area">
             <h1>Central de Comando da Cozinha</h1>
             <p>
               <i class="fa-solid fa-gamepad" aria-hidden="true" style="color: var(--neon-cyan);"></i>
-              <span>Demonstração visual de pedidos • Dados fictícios • HUD Gamer</span>
+              <span>Registro de Pedidos</span>
             </p>
           </div>
 
           <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
-            <!-- Indicador Servidor Aberto -->
-            <div class="store-status-badge">
-              <span class="status-indicator-dot" aria-hidden="true"></span>
-              <span>Modo demonstração • Sem backend</span>
-            </div>
-
             <!-- Perfil do Administrador -->
             <div class="admin-user-profile">
-              <div class="admin-avatar">AD</div>
+              <div class="admin-avatar">T</div>
               <div class="admin-user-info">
-                <span class="admin-user-name">Carlos Silva</span>
-                <span class="admin-user-role">Gerente • Admin Level 99</span>
+                <span class="admin-user-name">Teste</span>
               </div>
             </div>
           </div>
         </header>
 
         <!-- SUB-NAV DE TELAS (ABAS RÁPIDAS) -->
-        <nav class="admin-view-tabs" aria-label="Seções Administrativas">
-          <a href="/views/admin.html" class="admin-tab-btn active">
-            <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
-            <span>Fila de Pedidos (Kanban)</span>
-          </a>
-          <a href="#view-historico" class="admin-tab-btn">
-            <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
-            <span>Histórico de Vendas</span>
-          </a>
+        <nav class="admin-view-tabs" aria-label="Se&ccedil;&otilde;es Administrativas">
+          <a href="admin.html" class="admin-tab-btn active" aria-current="page"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Fila de Pedidos</span></a>
+          <a href="historico.html" class="admin-tab-btn"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Hist&oacute;rico</span></a>
+          <a href="estoque.html" class="admin-tab-btn"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Controle de Estoque</span></a>
         </nav>
-
-        <!-- ===================================================================
-             TELA 1: VISÃO GERAL (KANBAN COM FILTRAGEM: TODOS, RECEBIDOS, PREPARO, PRONTOS, ENCERRADOS)
-             =================================================================== -->
-        <div id="view-visao-geral" class="admin-tab-view" style="display: block;">
+<div id="view-visao-geral" class="admin-tab-view" style="display: block;">
 
           <!-- INDICADORES (KPI CARDS - CLIQUES ALTERNAM O FILTRO PURO CSS) -->
           <section class="kpi-indicators-grid" aria-label="Indicadores de Pedidos">
@@ -241,7 +217,6 @@
                   </div>
                   <div class="order-modality-block">
                     <span class="status-tag tag-table"><i class="fa-solid fa-chair"></i> Mesa 04</span>
-                    <p class="order-address-text"><i class="fa-solid fa-location-crosshairs"></i> Salão Principal • Próximo ao Setup 01</p>
                   </div>
                   <div class="order-items-list">
                     <div class="order-item-line">
@@ -287,7 +262,6 @@
                   </div>
                   <div class="order-modality-block">
                     <span class="status-tag tag-table"><i class="fa-solid fa-chair"></i> Mesa 08</span>
-                    <p class="order-address-text"><i class="fa-solid fa-location-crosshairs"></i> Salão Superior • Mezanino Gamer</p>
                   </div>
                   <div class="order-items-list">
                     <div class="order-item-line">
@@ -343,7 +317,6 @@
                   </div>
                   <div class="order-modality-block">
                     <span class="status-tag tag-counter"><i class="fa-solid fa-gamepad"></i> Balcão 02</span>
-                    <p class="order-address-text"><i class="fa-solid fa-location-crosshairs"></i> Consumo no Balcão • Banco 02</p>
                   </div>
                   <div class="order-items-list">
                     <div class="order-item-line">
@@ -399,7 +372,6 @@
                   </div>
                   <div class="order-modality-block">
                     <span class="status-tag tag-table"><i class="fa-solid fa-chair"></i> Mesa 02</span>
-                    <p class="order-address-text"><i class="fa-solid fa-location-crosshairs"></i> Salão Principal • Levar à mesa agora</p>
                   </div>
                   <div class="order-items-list">
                     <div class="order-item-line">
@@ -455,7 +427,6 @@
                   </div>
                   <div class="order-modality-block">
                     <span class="status-tag tag-table"><i class="fa-solid fa-chair"></i> Mesa 06</span>
-                    <p class="order-address-text"><i class="fa-solid fa-location-crosshairs"></i> Mesa liberada e higienizada</p>
                   </div>
                   <div class="order-items-list">
                     <div class="order-item-line">
@@ -485,66 +456,10 @@
           </section>
 
         </div>
-
-        <!-- ===================================================================
-             TELA: HISTÓRICO DE VENDAS & COMANDAS ENCERRADAS
-             =================================================================== -->
-        <div id="view-historico" class="admin-tab-view" style="margin-top: 40px;">
-          <div class="section-header">
-            <div>
-              <h2 class="section-title">Histórico de Comandas Encerradas</h2>
-              <p style="color: var(--text-muted); font-size: 14px; margin-top: 4px;">
-                Registro completo de todos os pedidos finalizados e contas pagas na lanchonete.
-              </p>
-            </div>
-          </div>
-
-          <div class="history-table-wrapper">
-            <table class="history-table">
-              <thead>
-                <tr>
-                  <th># Pedido</th>
-                  <th>Horário</th>
-                  <th>Mesa</th>
-                  <th>Cliente</th>
-                  <th>Itens Consumidos</th>
-                  <th>Total</th>
-                  <th>Pagamento</th>
-                </tr>
-              </thead>
-              <tbody id="history-table-body">
-                <tr>
-                  <td><strong style="color: var(--neon-cyan);">#1035</strong></td>
-                  <td>18:50</td>
-                  <td><span class="status-tag tag-table">Mesa 06</span></td>
-                  <td><strong>Renata Castro</strong></td>
-                  <td>2x Smash Burger Duplo, 2x Coca-Cola 350ml</td>
-                  <td><strong style="color: #FFF;">R$ 73,80</strong></td>
-                  <td><span style="color: var(--neon-green);">Pago no Cartão de Crédito</span></td>
-                </tr>
-                <tr>
-                  <td><strong style="color: var(--neon-cyan);">#1034</strong></td>
-                  <td>18:30</td>
-                  <td><span class="status-tag tag-counter">Balcão 01</span></td>
-                  <td><strong>Guilherme Santos</strong></td>
-                  <td>1x Combo Duplo Clássico</td>
-                  <td><strong style="color: #FFF;">R$ 42,90</strong></td>
-                  <td><span style="color: var(--neon-green);">Pago no PIX</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
       </main>
     </div>
-
   </div>
-
-  <!-- Espaço reservado para implementação JavaScript pelos membros da equipe -->
-  <!-- Primeiro as ações compartilhadas; depois o código específico desta tela. -->
-  <script src="/assets/js/comum.js"></script>
-  <script src="/assets/js/admin.js"></script>
-
+  <script src="../assets/js/comum.js"></script>
+  <script src="../assets/js/admin.js"></script>
 </body>
 </html>

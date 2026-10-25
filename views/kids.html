@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Área Kids — Pixel Burguer</title><meta name="description" content="Cardápio infantil gamer com mini burgers e combos temáticos da Pixel Burguer.">
+<!-- As três folhas seguem esta ordem: base, identidade gamer e personalização Kids. -->
+<link rel="stylesheet" href="../assets/css/style.css"></head>
+<body><a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+<div class="app-layout">    <!-- BARRA LATERAL (SIDEBAR) -->
+    <aside class="sidebar" aria-label="Menu Principal">
+      <div>
+        <a href="index.html" class="sidebar-brand" title="Pixel Burguer - Início">
+          <img src="../assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="logo-img">
+        </a>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" class="nav-link" title="Página Inicial">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Início</span>
+          </a>
+          <a href="cardapio.html" class="nav-link" title="Ver Cardápio Completo">
+            <i class="fa-solid fa-burger" aria-hidden="true"></i>
+            <span>Cardápio</span>
+          </a>
+          <!-- ÁREA KIDS: link para a nova página temática infantil. -->
+          <a href="kids.html" class="nav-link nav-link-kids active" aria-current="page" title="Lanches e combos para pequenos gamers">
+            <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+            <span>Área Kids</span><span class="kids-nav-spark" aria-hidden="true">★</span>
+          </a>
+          <a href="pedido.html" class="nav-link" title="Meu Pedido na Mesa">
+            <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+            <span>Meu Pedido</span>
+          </a>
+          <a href="sobre.html" class="nav-link" title="Sobre a Pixel Burguer">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Sobre</span>
+          </a>
+          <a href="contato.html" class="nav-link" title="Fale Conosco">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Contato</span>
+          </a>
+          <!-- Link do Administrador inserido no Menu Principal -->
+          <a href="admin.html" class="nav-link nav-link-admin" title="Painel da Cozinha / Administração (Acesso liberado para testes)">
+            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+            <span>Painel Admin</span>
+            <span class="nav-badge-pill">Acesso</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Rodapé da barra lateral -->
+      <div class="sidebar-footer">
+        <img src="../assets/images/LogoPixelBurguer1.png" alt="" class="footer-icon" aria-hidden="true">
+        <p class="footer-text">Sabor, qualidade e aquele toque especial em cada mordida.</p>
+        <div class="accent-line" aria-hidden="true"></div>
+      </div>
+    </aside>
+<div class="main-content">      <!-- CABEÇALHO SUPERIOR -->
+      <header class="top-header">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" placeholder="Buscar no cardápio..." aria-label="Buscar produtos no cardápio">
+        </div>
+
+        <div class="header-actions">
+          <a href="pedido.html" class="header-icon-btn" title="Ver pedido da mesa" aria-label="Carrinho zerado">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="badge-count">0</span>
+          </a>
+          <a href="login.html" class="header-icon-btn" title="Minha Conta / Entrar" aria-label="Perfil do usuário">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+          </a>
+        </div>
+      </header>
+<main class="page-container kids-page" id="conteudo-principal">
+<!-- HERO: introdução do universo infantil. Sem fotos externas ou imagens quebradas. -->
+<section class="kids-hero"><div class="kids-hero-copy"><span class="kids-kicker">PIXEL BURGUER · MINI PLAYERS</span>
+<h1>Área <span>Kids</span> <b>✦</b></h1>
+<p>Para pequenos gamers com grandes aventuras! Nossos burgers e combos infantis transformam cada refeição em uma nova fase.</p>
+<a href="#kids-produtos" class="kids-cta">Escolher minha missão <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a></div>
+<div class="kids-hero-scene" aria-hidden="true"><span>★</span><span class="kids-gamepad">🎮</span><span class="kids-burger">🍔</span><span>✦</span></div></section>
+<!-- TEXTO DE APOIO: não atribui licenças ou parcerias às marcas de jogos. -->
+<div class="kids-info-strip"><span>🎯 Porções pensadas para crianças</span><span>🕹️ Temas de jogos e aventuras</span><span>🍟 Mini combos especiais</span></div>
+<section id="kids-produtos" class="kids-catalog" aria-labelledby="kids-catalog-title"><div class="kids-heading"><div><span class="kids-kicker">ESCOLHA SEU PERSONAGEM</span><h2 id="kids-catalog-title">O cardápio dos mini players</h2></div><p>8 lanches</p></div>
+<div class="kids-grid">          <!-- PRODUTO KIDS: Bloco Craft. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/BlocoCraft.jpg" alt="Bloco Craft" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Universo dos blocos</span>
+              <h3>Bloco Craft</h3><p>Mini hambúrguer bovino de 90 g no pão brioche quadradinho, cheddar, alface e ketchup. Inspirado nas aventuras de construção e exploração.</p>
+              <div class="product-price">R$ 22,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Bloco Craft">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Bloco Craft">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Bloco Craft">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Bloco Craft ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: Combo Creeper Crunch. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/ComboCreeperCrunch.jpg" alt="Combo Creeper Crunch" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Mundo pixelado</span>
+              <h3>Combo Creeper Crunch</h3><p>Mini burger com cheddar, batatas em cubinhos crocantes e suco de maçã de 200 ml. Uma missão cheia de sabor!</p>
+              <div class="product-price">R$ 32,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Combo Creeper Crunch">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Combo Creeper Crunch">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Combo Creeper Crunch">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Combo Creeper Crunch ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: X-Player Verde. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/XPlayerVerde.jpg" alt="X-Player Verde" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Universo Xbox</span>
+              <h3>X-Player Verde</h3><p>Mini burger de frango grelhado, queijo muçarela, alface e maionese suave em pão macio. Energia para conquistar novas fases.</p>
+              <div class="product-price">R$ 23,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de X-Player Verde">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de X-Player Verde">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de X-Player Verde">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar X-Player Verde ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: Play Power Azul. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/PlayPowerAzul.jpg" alt="Play Power Azul" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Universo PlayStation</span>
+              <h3>Play Power Azul</h3><p>Mini cheeseburger bovino de 90 g com cheddar e molho suave, acompanhado de batatas sorriso. Feito para quem adora dar o play.</p>
+              <div class="product-price">R$ 27,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Play Power Azul">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Play Power Azul">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Play Power Azul">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Play Power Azul ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: Super Hero Smash. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/SuperHeroSmash.jpg" alt="Super Hero Smash" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Universo dos heróis</span>
+              <h3>Super Hero Smash</h3><p>Mini smash bovino de 90 g com cheddar, tomate e molho especial suave. O poder de um superlanche em tamanho de herói mirim.</p>
+              <div class="product-price">R$ 24,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Super Hero Smash">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Super Hero Smash">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Super Hero Smash">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Super Hero Smash ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: Aranha Burger. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/AranhaBurger.jpg" alt="Aranha Burger" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Heróis urbanos</span>
+              <h3>Aranha Burger</h3><p>Mini burger de frango empanado, queijo e ketchup no brioche, com batatas fininhas que lembram uma teia crocante.</p>
+              <div class="product-price">R$ 26,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Aranha Burger">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Aranha Burger">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Aranha Burger">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Aranha Burger ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: Kart Turbo. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/KartTurbo.jpg" alt="Kart Turbo" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Corridas e diversão</span>
+              <h3>Kart Turbo</h3><p>Mini hambúrguer de carne, queijo e bacon em pedacinhos, acompanhado de batatas palito. Aperte o cinto para essa corrida de sabores!</p>
+              <div class="product-price">R$ 29,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Kart Turbo">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Kart Turbo">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Kart Turbo">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Kart Turbo ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article>          <!-- PRODUTO KIDS: Combo Mini Boss. A imagem poderá ser substituída futuramente. -->
+          <article class="kids-product">
+            <img src="../assets/images/ComboMiniBoss.jpg" alt="Combo Mini Boss" class="kids-product-image" loading="lazy">
+            <div class="kids-product-body"><span class="kids-product-category">Missão final</span>
+              <h3>Combo Mini Boss</h3><p>Mini burger bovino com cheddar, mini porção de nuggets (4 unidades), batatinhas e suco de uva de 200 ml. Para vencer a fome do chefão.</p>
+              <div class="product-price">R$ 38,90</div>
+              <div class="product-actions">
+                <div class="qty-selector" aria-label="Controle de quantidade de Combo Mini Boss">
+                  <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Combo Mini Boss">−</button>
+                  <span class="qty-number">1</span>
+                  <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Combo Mini Boss">+</button>
+                </div>
+                <button type="button" class="btn-add-product" aria-label="Adicionar Combo Mini Boss ao pedido">
+                  <i class="fa-solid fa-plus" aria-hidden="true"></i>
+                  <span>Adicionar</span>
+                </button>
+              </div>
+            </div>
+          </article></div></section>
+<section id="kids-sobremesas" class="kids-catalog" aria-labelledby="kids-desserts-title">
+  <div class="kids-heading">
+    <div><span class="kids-kicker">DOCE RECOMPENSA</span><h2 id="kids-desserts-title">Sobremesas temáticas</h2></div>
+    <p>8 sobremesas</p>
+  </div>
+  <div class="kids-grid">
+    <article class="kids-product">
+      <img src="../assets/images/CreeperBrownie.jpg" alt="Creeper Brownie com sorvete e calda de chocolate" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Mundo pixelado</span>
+        <h3>Creeper Brownie — Explosão de Chocolate</h3>
+        <p>Brownie de chocolate meio amargo, servido quentinho com sorvete de baunilha, calda de chocolate e confeitos verdes. Acompanha decoração com o rostinho pixelado de um Creeper feito de chocolate.</p>
+        <div class="product-price">R$ 19,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Creeper Brownie">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Creeper Brownie">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Creeper Brownie">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Creeper Brownie ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/PoçãodeVida.jpg" alt="Poção de Vida, sundae de morango e baunilha" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Poções mágicas</span>
+        <h3>Poção de Vida — Sundae HP+</h3>
+        <p>Sorvete cremoso de morango e baunilha, servido em uma taça temática de poção mágica, com calda vermelha de morango, chantilly e confeitos coloridos. Uma deliciosa poção para recuperar a energia depois de cada aventura!</p>
+        <div class="product-price">R$ 16,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Poção de Vida">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Poção de Vida">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Poção de Vida">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Poção de Vida ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/PlayStationChoco.jpg" alt="Mini panquecas de chocolate PlayStation Choco Buttons" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Universo PlayStation</span>
+        <h3>PlayStation Choco Buttons</h3>
+        <p>Mini panquecas fofinhas de chocolate, decoradas com símbolos de triângulo, círculo, X e quadrado feitos de chocolate branco e ao leite. Acompanham calda de chocolate cremosa para mergulhar.</p>
+        <div class="product-price">R$ 18,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de PlayStation Choco Buttons">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de PlayStation Choco Buttons">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de PlayStation Choco Buttons">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar PlayStation Choco Buttons ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/XboxGreenShake.jpg" alt="Xbox Green Shake, milkshake de baunilha com calda verde" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Universo Xbox</span>
+        <h3>Xbox Green Shake</h3>
+        <p>Milkshake de baunilha com calda verde de maçã, chantilly e confeitos verdes e brancos. Finalizado com um medalhão de chocolate em formato de controle gamer. O power-up perfeito para os pequenos jogadores!</p>
+        <div class="product-price">R$ 19,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Xbox Green Shake">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Xbox Green Shake">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Xbox Green Shake">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Xbox Green Shake ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/SuperHeroWaffle.jpg" alt="Super Hero Waffle com sorvete, morangos e chocolate" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Universo dos heróis</span>
+        <h3>Super Hero Waffle — Poder Supremo</h3>
+        <p>Waffle dourado e crocante, servido com sorvete de creme, morangos frescos, calda de chocolate e uma estrela comestível de chocolate. Uma sobremesa digna dos maiores super-heróis!</p>
+        <div class="product-price">R$ 22,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Super Hero Waffle">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Super Hero Waffle">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Super Hero Waffle">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Super Hero Waffle ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/AranhaChoco.jpg" alt="Aranha Choco Web, petit gâteau com sorvete e teia de chocolate" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Heróis urbanos</span>
+        <h3>Aranha Choco Web — Teia de Chocolate</h3>
+        <p>Petit gâteau de chocolate com recheio cremoso, acompanhado de uma bola de sorvete de baunilha. Finalizado com fios de chocolate branco formando uma teia e detalhes vermelhos de morango.</p>
+        <div class="product-price">R$ 17,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Aranha Choco Web">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Aranha Choco Web">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Aranha Choco Web">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Aranha Choco Web ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/KartTurboDonuts.jpg" alt="Kart Turbo Donuts, minidonuts com chocolate e confeitos" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Corridas e diversão</span>
+        <h3>Kart Turbo Donuts</h3>
+        <p>Três minidonuts macios, cobertos com chocolate ao leite e confeitos vermelhos, amarelos e azuis. Decorados com bandeirinhas quadriculadas comestíveis, inspiradas nas pistas de corrida dos videogames.</p>
+        <div class="product-price">R$ 17,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Kart Turbo Donuts">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Kart Turbo Donuts">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Kart Turbo Donuts">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Kart Turbo Donuts ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="kids-product">
+      <img src="../assets/images/BaúdoTesouro.jpg" alt="Baú do Tesouro de chocolate recheado de doces" class="kids-product-image" loading="lazy">
+      <div class="kids-product-body"><span class="kids-product-category">Tesouros e aventuras</span>
+        <h3>Baú do Tesouro — Loot Box Doce</h3>
+        <p>Baú de chocolate ao leite recheado com brigadeiro cremoso, mini marshmallows, confeitos dourados e pedacinhos de brownie. Uma surpresa deliciosa que revela seu tesouro ao quebrar a casquinha de chocolate!</p>
+        <div class="product-price">R$ 24,90</div>
+        <div class="product-actions">
+          <div class="qty-selector" aria-label="Controle de quantidade de Baú do Tesouro">
+            <button type="button" class="qty-btn" aria-label="Diminuir quantidade de Baú do Tesouro">−</button>
+            <span class="qty-number">1</span>
+            <button type="button" class="qty-btn" aria-label="Aumentar quantidade de Baú do Tesouro">+</button>
+          </div>
+          <button type="button" class="btn-add-product" aria-label="Adicionar Baú do Tesouro ao pedido">
+            <i class="fa-solid fa-plus" aria-hidden="true"></i><span>Adicionar</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</main></div></div>
+<script src="../assets/js/kids.js"></script>
+</body></html>

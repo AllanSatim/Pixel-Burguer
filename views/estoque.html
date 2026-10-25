@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Estoque &mdash; Pixel Burguer</title>
+  <meta name="description" content="Disponibilidade de produtos no card&aacute;pio.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conte&uacute;do</a>
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Navegação Administrativa">
+      <div>
+        <a href="admin.html" class="sidebar-brand" title="Pixel Burguer - Painel Admin">
+          <img src="../assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="logo-img">
+        </a>
+
+        <nav class="sidebar-nav">
+          <a href="admin.html" class="nav-link" title="Fila de Pedidos (Kanban)">
+            <i class="fa-solid fa-gamepad" aria-hidden="true" style="color: var(--neon-cyan);"></i>
+            <span>Fila de Pedidos</span>
+          </a>
+          <a href="historico.html" class="nav-link" title="Histórico de Vendas">
+            <i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i>
+            <span>Histórico</span>
+          </a>
+          <a href="estoque.html" class="nav-link active" aria-current="page" title="Controle de Estoque">
+            <i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i>
+            <span>Controle de Estoque</span>
+          </a>
+          <a href="cardapio.html" class="nav-link" title="Ver Cardápio Público">
+            <i class="fa-solid fa-utensils" aria-hidden="true"></i>
+            <span>Cardápio</span>
+          </a>
+          <!-- Acesso à nova área infantil diretamente pelo painel. -->
+          <a href="kids.html" class="nav-link nav-link-kids" title="Ver Área Kids">
+            <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+            <span>Área Kids</span>
+          </a>
+          <a href="index.html" class="nav-link" title="Ir para a Visão do Cliente">
+            <i class="fa-solid fa-store" aria-hidden="true"></i>
+            <span>Voltar ao Salão</span>
+          </a>
+          <a href="login.html" class="nav-link" title="Sair da Conta de Administrador" style="margin-top: 16px; color: #FF2E63;">
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true" style="color: #FF2E63;"></i>
+            <span>Sair do Admin</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Rodapé do menu administrativo -->
+      <div class="sidebar-footer">
+        <img src="../assets/images/LogoPixelBurguer1.png" alt="" class="footer-icon" aria-hidden="true">
+        <p class="footer-text">Central de Produção &amp; Pedidos Gamer</p>
+        <div class="accent-line" aria-hidden="true"></div>
+      </div>
+    </aside>
+    <div class="main-content">
+      <main id="conteudo-principal" class="page-container" style="padding-top: 28px;">
+<header class="admin-top-bar">
+          <div class="admin-title-area">
+            <h1>Controle de Estoque</h1>
+            <p>
+              <i class="fa-solid fa-gamepad" aria-hidden="true" style="color: var(--neon-cyan);"></i>
+              <span>Disponibilidade de produtos no card&aacute;pio.</span>
+            </p>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <!-- Perfil do Administrador -->
+            <div class="admin-user-profile">
+              <div class="admin-avatar">T</div>
+              <div class="admin-user-info">
+                <span class="admin-user-name">Teste</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- SUB-NAV DE TELAS (ABAS RÁPIDAS) -->
+        <nav class="admin-view-tabs" aria-label="Se&ccedil;&otilde;es Administrativas">
+          <a href="admin.html" class="admin-tab-btn"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Fila de Pedidos</span></a>
+          <a href="historico.html" class="admin-tab-btn"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i><span>Hist&oacute;rico</span></a>
+          <a href="estoque.html" class="admin-tab-btn active" aria-current="page"><i class="fa-solid fa-boxes-stacked" aria-hidden="true"></i><span>Controle de Estoque</span></a>
+        </nav>
+<section id="view-estoque" class="stock-view" aria-labelledby="stock-title">
+          <header class="stock-heading">
+            <div>
+              <span class="stock-kicker"><i class="fa-solid fa-gamepad" aria-hidden="true"></i> CENTRAL DE MENU</span>
+              <h2 id="stock-title">Controle de Estoque</h2>
+              <p>Gerencie a disponibilidade dos produtos exibidos no cardápio.</p>
+            </div>
+            <span class="stock-demo-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Exemplo visual • sem integração</span>
+          </header>
+
+          <div class="stock-summary" aria-label="Resumo ilustrativo do estoque">
+            <div class="stock-summary-card">
+              <span class="stock-summary-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></span>
+              <span class="stock-summary-label">Produtos no cardápio</span>
+              <strong>46</strong>
+            </div>
+            <div class="stock-summary-card is-available">
+              <span class="stock-summary-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></span>
+              <span class="stock-summary-label">Disponíveis</span>
+              <strong>46</strong>
+            </div>
+            <div class="stock-summary-card is-unavailable">
+              <span class="stock-summary-icon"><i class="fa-solid fa-circle-xmark" aria-hidden="true"></i></span>
+              <span class="stock-summary-label">Esgotados</span>
+              <strong>0</strong>
+            </div>
+          </div>
+
+          <div class="stock-legend">
+            <span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Disponível para pedidos</span>
+            <span><i class="fa-solid fa-circle-xmark" aria-hidden="true"></i> Esgotado no momento</span>
+          </div>
+
+          <div class="stock-categories">
+            <section class="stock-category" aria-labelledby="stock-burgers">
+              <header class="stock-category-heading">
+                <h3 id="stock-burgers"><i class="fa-solid fa-burger" aria-hidden="true"></i> Hambúrgueres artesanais</h3>
+                <span>8 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Cheeseburger Clássico</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Cheeseburger Clássico"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Bacon Burger</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Bacon Burger"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Smash Burger Duplo</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Smash Burger Duplo"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Trufado Artesanal</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Trufado Artesanal"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Pixel Smash</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Pixel Smash"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Boss Bacon</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Boss Bacon"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">XP Chicken</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de XP Chicken"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Double Respawn</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Double Respawn"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+
+            <section class="stock-category" aria-labelledby="stock-combos">
+              <header class="stock-category-heading">
+                <h3 id="stock-combos"><i class="fa-solid fa-box-archive" aria-hidden="true"></i> Combos completos</h3>
+                <span>4 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-box"></i></span><span class="stock-product-name">Combo Player 1</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Combo Player 1"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-box"></i></span><span class="stock-product-name">Combo Duplo Clássico</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Combo Duplo Clássico"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-box"></i></span><span class="stock-product-name">Combo Co-op</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Combo Co-op"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-box"></i></span><span class="stock-product-name">Combo Bacon Lovers</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Combo Bacon Lovers"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+
+            <section class="stock-category" aria-labelledby="stock-sides">
+              <header class="stock-category-heading">
+                <h3 id="stock-sides"><i class="fa-solid fa-bowl-food" aria-hidden="true"></i> Acompanhamentos</h3>
+                <span>8 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Batata Frita Crocante</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Batata Frita Crocante"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Onion Rings Especial</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Onion Rings Especial"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Nuggets Artesanais (8 un)</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Nuggets Artesanais"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Batata Cheddar &amp; Bacon</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Batata Cheddar e Bacon"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">XP Fries — Batata Rústica</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de XP Fries"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Chicken Bites Crocantes (8 un)</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Chicken Bites Crocantes"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Cheese Balls — Esferas de Queijo (8 un)</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Cheese Balls"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-utensils"></i></span><span class="stock-product-name">Boss Fries — Batata Suprema</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Boss Fries"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+
+            <section class="stock-category" aria-labelledby="stock-drinks">
+              <header class="stock-category-heading">
+                <h3 id="stock-drinks"><i class="fa-solid fa-wine-bottle" aria-hidden="true"></i> Bebidas</h3>
+                <span>6 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-bottle-water"></i></span><span class="stock-product-name">Coca-Cola Lata 350ml</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Coca-Cola Lata 350ml"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-bottle-water"></i></span><span class="stock-product-name">Sprite Lata 350ml</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Sprite Lata 350ml"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-bottle-water"></i></span><span class="stock-product-name">Guaraná Antarctica 350ml</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Guaraná Antarctica 350ml"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-bottle-water"></i></span><span class="stock-product-name">Água Mineral 500 ml</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Água Mineral"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-glass-water"></i></span><span class="stock-product-name">Suco Natural de Laranja 400 ml</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Suco Natural de Laranja"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-bottle-water"></i></span><span class="stock-product-name">Coca-Cola Original 2 Litros</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Coca-Cola Original 2 Litros"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+
+            <section class="stock-category" aria-labelledby="stock-desserts">
+              <header class="stock-category-heading">
+                <h3 id="stock-desserts"><i class="fa-solid fa-ice-cream" aria-hidden="true"></i> Sobremesas</h3>
+                <span>4 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-ice-cream"></i></span><span class="stock-product-name">Brownie com Sorvete</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Brownie com Sorvete"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-glass-water"></i></span><span class="stock-product-name">Milkshake 8-Bit — Chocolate com Oreo</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Milkshake 8-Bit"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">Cookie XP — Cookie com Sorvete</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Cookie XP"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">Churros XP — Churros com Doce de Leite</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Churros XP"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+
+            <section class="stock-category" aria-labelledby="stock-kids">
+              <header class="stock-category-heading">
+                <h3 id="stock-kids"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Área Kids · Lanches</h3>
+                <span>8 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Bloco Craft</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Bloco Craft"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-box"></i></span><span class="stock-product-name">Combo Creeper Crunch</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Combo Creeper Crunch"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">X-Player Verde</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de X-Player Verde"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Play Power Azul</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Play Power Azul"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Super Hero Smash</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Super Hero Smash"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Aranha Burger</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Aranha Burger"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-burger"></i></span><span class="stock-product-name">Kart Turbo</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Kart Turbo"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-box"></i></span><span class="stock-product-name">Combo Mini Boss</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Combo Mini Boss"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+
+            <section class="stock-category" aria-labelledby="stock-kids-desserts">
+              <header class="stock-category-heading">
+                <h3 id="stock-kids-desserts"><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> Área Kids · Sobremesas</h3>
+                <span>8 produtos</span>
+              </header>
+              <ul class="stock-product-list">
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">Creeper Brownie — Explosão de Chocolate</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Creeper Brownie"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-ice-cream"></i></span><span class="stock-product-name">Poção de Vida — Sundae HP+</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Poção de Vida"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">PlayStation Choco Buttons</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de PlayStation Choco Buttons"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-glass-water"></i></span><span class="stock-product-name">Xbox Green Shake</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Xbox Green Shake"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">Super Hero Waffle — Poder Supremo</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Super Hero Waffle"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">Aranha Choco Web — Teia de Chocolate</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Aranha Choco Web"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-cookie-bite"></i></span><span class="stock-product-name">Kart Turbo Donuts</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Kart Turbo Donuts"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+                <li class="stock-product-row"><span class="stock-product-icon"><i class="fa-solid fa-gift"></i></span><span class="stock-product-name">Baú do Tesouro — Loot Box Doce</span><span class="stock-current-status"><i class="fa-solid fa-circle-check"></i> Disponível</span><div class="stock-actions" role="group" aria-label="Disponibilidade de Baú do Tesouro"><button type="button" class="stock-action is-selected" aria-pressed="true"><i class="fa-solid fa-check"></i><span>Disponível</span></button><button type="button" class="stock-action" aria-pressed="false"><i class="fa-solid fa-xmark"></i><span>Esgotado</span></button></div></li>
+              </ul>
+            </section>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
