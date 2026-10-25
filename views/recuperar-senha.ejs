@@ -6,8 +6,8 @@
   <title>Recuperar Senha — Pixel Burguer</title>
   <meta name="description" content="Recupere o acesso à sua conta Pixel Burguer através do envio de instruções para seu e-mail cadastrado.">
   <!-- CSS base mantém o layout; o tema abaixo personaliza cores e componentes. -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/tema-gamer.css">
+  <link rel="stylesheet" href="/public/assets/css/style.css">
+  <link rel="stylesheet" href="/public/assets/css/tema-gamer.css">
 </head>
 <body>
   <!-- Acessibilidade: permite pular a navegação usando a tecla Tab. -->
@@ -19,8 +19,8 @@
 
       <!-- CABEÇALHO COM LOGO -->
       <header class="auth-header">
-        <a href="index.html" class="auth-logo-link" title="Voltar para a página inicial">
-          <img src="../assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="auth-logo-img">
+        <a href="/" class="auth-logo-link" title="Voltar para a página inicial">
+          <img src="/public/assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="auth-logo-img">
         </a>
         <div class="auth-icon-circle" aria-hidden="true">
           <i class="fa-solid fa-key"></i>
@@ -31,15 +31,22 @@
 
       <!-- ÁREA RESERVADA PARA MENSAGENS FUTURAS -->
       <div id="recovery-feedback" class="auth-alert-area" aria-live="polite">
-        <!-- Exemplo visual preparado para mensagem futura de confirmação de envio -->
+        <% if (locals.erro) { %>
+        <div class="alert-box alert-error" role="alert">
+          <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+          <span><%= erro %></span>
+        </div>
+        <% } %>
+        <% if (locals.sucesso) { %>
         <div class="alert-box alert-success" role="status">
           <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-          <span>Exemplo: Instruções enviadas com sucesso caso o e-mail exista em nossa base.</span>
+          <span><%= sucesso %></span>
         </div>
+        <% } %>
       </div>
 
       <!-- FORMULÁRIO DE RECUPERAÇÃO -->
-      <form action="#" method="post" class="auth-form">
+      <form action="/auth/recuperar-senha" method="post" class="auth-form">
 
         <!-- Campo E-mail -->
         <div class="form-group">
@@ -67,7 +74,7 @@
 
       <!-- RODAPÉ COM LINK PARA VOLTAR AO LOGIN -->
       <footer class="auth-footer">
-        <a href="login.html" class="btn-back-login">
+        <a href="/login" class="btn-back-login">
           <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
           <span>Voltar ao login</span>
         </a>
@@ -77,7 +84,7 @@
 
     <!-- LINK PARA VOLTAR AO INÍCIO -->
     <div class="auth-back-home">
-      <a href="index.html" class="auth-back-link">
+      <a href="/" class="auth-back-link">
         <i class="fa-solid fa-house" aria-hidden="true"></i>
         <span>Voltar para a página inicial</span>
       </a>
@@ -85,7 +92,7 @@
   </main>
 
   <!-- Primeiro as ações compartilhadas; depois o código específico desta tela. -->
-  <script src="../assets/js/comum.js"></script>
-  <script src="../assets/js/recuperar-senha.js"></script>
+  <script src="/public/assets/js/comum.js"></script>
+  <script src="/public/assets/js/recuperar-senha.js"></script>
 </body>
 </html>
