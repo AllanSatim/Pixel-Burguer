@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil — Pixel Burguer</title>
+  <meta name="description" content="Consulte os dados da sua mesa, seu carrinho e os últimos pedidos na Pixel Burguer.">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/tema-gamer.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <div class="app-layout">
+    <aside class="sidebar" aria-label="Menu Principal">
+      <div>
+        <a href="index.html" class="sidebar-brand" title="Pixel Burguer - Início">
+          <img src="../assets/images/LogoPixelBurguer1.png" alt="Pixel Burguer" class="logo-img">
+        </a>
+
+        <nav class="sidebar-nav">
+          <a href="index.html" class="nav-link" title="Página Inicial">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Início</span>
+          </a>
+          <a href="cardapio.html" class="nav-link" title="Cardápio Completo">
+            <i class="fa-solid fa-burger" aria-hidden="true"></i>
+            <span>Cardápio</span>
+          </a>
+          <a href="kids.html" class="nav-link nav-link-kids" title="Lanches e combos para pequenos gamers">
+            <i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i>
+            <span>Área Kids</span><span class="kids-nav-spark" aria-hidden="true">★</span>
+          </a>
+          <a href="pedido.html" class="nav-link" title="Meu Pedido na Mesa">
+            <i class="fa-solid fa-receipt" aria-hidden="true"></i>
+            <span>Meu Pedido</span>
+          </a>
+          <a href="sobre.html" class="nav-link" title="Sobre a Pixel Burguer">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Sobre</span>
+          </a>
+          <a href="contato.html" class="nav-link" title="Fale Conosco">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Contato</span>
+          </a>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <img src="../assets/images/LogoPixelBurguer1.png" alt="" class="footer-icon" aria-hidden="true">
+        <p class="footer-text">Sabor, qualidade e aquele toque especial em cada mordida.</p>
+        <div class="accent-line" aria-hidden="true"></div>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="top-header">
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <input type="search" placeholder="Buscar no cardápio..." aria-label="Buscar produtos no cardápio">
+        </div>
+
+        <div class="header-actions">
+          <a href="pedido.html" class="header-icon-btn" title="Ver pedido da mesa" aria-label="Carrinho zerado">
+            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            <span class="badge-count">0</span>
+          </a>
+          <a href="perfil.html" class="header-icon-btn" title="Minha Conta / Entrar" aria-label="Meu perfil">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+          </a>
+        </div>
+      </header>
+
+      <main class="page-container profile-page" id="conteudo-principal">
+        <header class="profile-page-heading">
+          <span class="profile-kicker">PIXEL BURGUER · PLAYER</span>
+          <h1>Meu Perfil</h1>
+          <p>Seus dados da mesa, seu pedido atual e seu histórico em um só lugar.</p>
+        </header>
+
+        <section class="profile-panel" aria-label="Informações do perfil">
+          <div class="profile-identity">
+            <div class="profile-avatar" aria-hidden="true">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
+            <div class="profile-identity-copy">
+              <span class="profile-label">Conta temporária</span>
+              <h2 id="profile-name">Carregando perfil...</h2>
+              <p id="profile-table"></p>
+              <span id="profile-id" class="profile-id"></span>
+            </div>
+          </div>
+          <div id="profile-guest" class="profile-guest" hidden>
+            <p>Você ainda não iniciou uma sessão nesta mesa.</p>
+            <a href="login.html" class="btn btn-primary">
+              <i class="fa-solid fa-gamepad" aria-hidden="true"></i>
+              <span>Conectar na mesa</span>
+            </a>
+          </div>
+        </section>
+
+        <div id="profile-content" class="profile-content">
+          <section class="profile-section" aria-labelledby="profile-current-title">
+            <div class="profile-section-heading">
+              <span class="profile-section-icon" aria-hidden="true"><i class="fa-solid fa-bag-shopping"></i></span>
+              <div>
+                <h2 id="profile-current-title">No carrinho agora</h2>
+                <p>Itens que você ainda não enviou para a comanda.</p>
+              </div>
+            </div>
+            <div id="profile-current-order" class="profile-order-list"></div>
+            <a href="pedido.html" class="profile-section-link">
+              Ver minha comanda <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </section>
+
+          <section class="profile-section" aria-labelledby="profile-history-title">
+            <div class="profile-section-heading">
+              <span class="profile-section-icon" aria-hidden="true"><i class="fa-solid fa-clock-rotate-left"></i></span>
+              <div>
+                <h2 id="profile-history-title">Últimos pedidos</h2>
+                <p>Seus três pedidos finalizados mais recentes nesta mesa.</p>
+              </div>
+            </div>
+            <div id="profile-order-history" class="profile-order-history"></div>
+          </section>
+        </div>
+
+        <div class="profile-actions">
+          <a href="cardapio.html" class="btn btn-outline">
+            <i class="fa-solid fa-burger" aria-hidden="true"></i>
+            <span>Voltar ao cardápio</span>
+          </a>
+          <button type="button" id="profile-logout" class="profile-logout">
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+            Sair da conta
+          </button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../assets/js/comum.js"></script>
+  <script src="../assets/js/perfil.js"></script>
+</body>
+</html>
